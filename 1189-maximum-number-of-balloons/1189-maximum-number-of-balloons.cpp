@@ -1,22 +1,14 @@
 class Solution {
 public:
     int maxNumberOfBalloons(string text) {
-        int ans = 0;
-        while(true){
-            string word = "balloon";
-            for(char &c : word){
-                bool found = false;
-                for(char &ch : text){
-                    if(ch == c){
-                        ch = '#';
-                        found = true;
-                        break;
-                    }
-                }
-                if(!found) return ans;
-            }
-            ans++;
+        vector<int> freq(26, 0);
+        for(char c : text){
+            freq[c - 'a']++;
+
         }
+        return min({
+            freq['b' - 'a'], freq['a' - 'a'], freq['l' - 'a']/2, freq['o' - 'a']/2, freq['n' - 'a']
+        });
     }
 };
 
