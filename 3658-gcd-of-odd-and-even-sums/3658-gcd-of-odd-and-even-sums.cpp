@@ -1,17 +1,7 @@
 class Solution {
 public:
     int gcdOfOddEvenSums(int n) {
-        int evenSum =0;
-        int oddSum = 0;
-       
-
-        for(int i = 0; i < n; i++){
-            oddSum += 2*i -1;
-            evenSum += 2*i;
-            
-
-        }
-        return gcd(oddSum, evenSum);
+        return n;
     }
 };
 
