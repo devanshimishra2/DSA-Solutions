@@ -16,7 +16,6 @@ public:
                     result += c;
                 }
             }
-            
         }
         return result;
     }
