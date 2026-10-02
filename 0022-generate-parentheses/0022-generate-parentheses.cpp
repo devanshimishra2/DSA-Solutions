@@ -7,13 +7,9 @@ public:
             ans.push_back(curr);
             return;
         }
-
-        // try to add "(" if possible
         if(open < n) {
             solve(n, open + 1, close, curr + "(");
         }
-
-        // try to add ")" if possible
         if(close < open) {
             solve(n, open, close + 1, curr + ")");
         }
